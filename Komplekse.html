@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<title>Mathedemo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<!-- LATEX import -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+<link rel="stylesheet" href="./Navigering.css">
+</head>
+
+<body>
+ <!-- Navbar-->
+ <div class="navbar">
+    <a href="index.html">Hjem</a>
+    <a href="Principia.html">Principia Mathematica</a>
+    <a class="aktivside" href="Komplekse.html">Komplekse tall</a>
+    <a href="Taylor.html">Taylorrekker</a>
+    <a href="Imponerelærer.html">Tips</a>
+    <a href="memes.html">Memes</a>
+    <a id="git" href="https://github.com/Danajax" target="_blank">
+      <img src="./Bilder/GitHub-Mark-Light-32px.png">
+  </a>
+  </div>
+
+  <div class="main">
+    <div class="overskrift">
+      <h3>Nå har du endelig trykket deg inn på komplekse tall og jeg kan fortelle deg at disse tallene lar deg gjøre noe helt unikt! Negative kvadratrøtter, logaritmer og du blir introdusert til noe helt nytt! Nemlig: $i^2 = -1$, et "tall" som har egenskapet til å være et negativt kvadrat, fascinerende hva? Vi kommer ikke til å gå i dybden på kompleks analyse, men kommer til å forklare de mest fundamentale prinsippene. </h3>
+    </div>
+    <div class="informasjon">
+      <h3>Hva er komplekse tall?</h3>
+      $$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C} \subset \mathbb{H} \subset \mathbb{O} \subset \mathbb{S} $$
+      <p>Vel, vi kjenner til reelle tall som alle tall på tallinjen og vi kan uttryke denne tallinjen som x-aksen. De komplekse tallene utfører andreaksen og vi får dermed et to-dimensjonalt koordinatsystem. Mengden komplekse tall kan uttrykkes på følgende måte $$\mathbb{C} = \left \{ a + ib \hspace{5px} | \hspace{5px} a, b \in \mathbb{R}, i^2 = -1 \right \} $$ Denne formen kalles <i>kartesisk koordinatform</i>, hvor man omtaler $a$ som <i>realdelen</i> og $ib$ som <i>imaginærdelen</i>. Med denne kunnskapen kan et eksempel på et komplekst tall $z$ være $z = 2 + 2i$. Men så oppdager en kjent matematiker, selveste <a href="https://snl.no/Leonhard_Euler">Leonard Euler</a> noe unikt.</p>
+      <h3>Hva oppdager Euler?</h3>
+      <p>$$e^{i\pi} + 1 = 0$$
+      Dette er Eulers identitet og blir ofte beundret av mange. Men hvordan kom vi hit? Vi ser at $e^{i\pi}$ ikke er på kartesisk koordinatform, derfor må vi lære <i>polar koordinatform</i>. $z = r (\cos(\theta) + i\sin(\theta))$, der $r = |z| = \sqrt{(a^2+b^2)}$ er <i>modulus</i> og $\theta$ er $argumentet$ (Arg). Argumentet finner vi gjennom følgende $\sin \theta = \frac{b}{r}$ og $\cos \theta = \frac{a}{r}$. Vi følger eksempelet og gjør om $z$ fra kartesisk til polarform. $$z = 2 + 2i $$ $$r = \sqrt{2^2+2^2} = 2\sqrt{2}$$ $$\cos \theta = \frac{2}{2\sqrt{2}} = \frac{\pi}{4}$$ $$\sin \theta = \frac{2}{2\sqrt{2}} = \frac{\pi}{4}$$ $$z = 2\sqrt{2} \left (\cos \frac{\pi}{4} + i \sin \frac{\pi}{4}\right ) \hspace{10px} \square $$ </p>
+      <p>Nå tenker du kanskje at vi er på villspor men, det var her Euler oppdaget følgende formel $$re^{i\theta} = r(\cos \theta + i \sin \theta)$$
+      Da kan Euler sin identitet grovt bevises og er en oppgave til leseren. Men så oppdager <a href="https://mathshistory.st-andrews.ac.uk/Biographies/De_Moivre/">Abraham de Moivre</a> et gunstig korollar. Nemlig at $$re^{in\theta} = r(\cos n\theta + i \sin n\theta)$$ Etter dette har du nå veldig grunnlegende kunnskaper om komplekse tall, men dette er nok til å finne negativ logaritmer og negative røtter</p>
+      <h3>Negativ partalls-rot?</h3>
+      $$\sqrt{-64}$$
+      <p>Er et veldig grunnlegende eksempel, og er noe vi kan løse med komplekse tall $$=\sqrt{64i^2} = 8i \hspace{10px}\square$$ En n-te rot har opp mot n-løsninger som er komplekse. For eksempel ville mange svart at $\sqrt[3]{1} = 1$, men det eksisterer faktisk 3 løsninger. For å dykke inn i disse er det lurt å ha studert <i>algebraens fundamentalteorem</i></p>
+      <h3>Logaritme til et negativt tall?</h3>
+      <p>$$\log(z) = ln(r) + i\theta $$
+      Nå har vi nok kunnskap til å ta logartimen til alle negative komplekse/reelle tall. $$\ln(-1) = i\pi$$ Dette kommer fra Euler's formel.$$\ln(-e) = \ln(e)+i\pi$$ $$= 1 + i\pi$$</p>
+      <h3>Hva med trigonometri?</h3>
+      <p>Noe som er veldig interessant med komplekse tall er de hyperbolske funksjonene
+      $$\cos(ix) = \cosh(x)$$
+      $$\sin(ix) = \sinh(x)$$
+      $$\tan(ix) = \tanh(x)$$
+      Vi kan også uttrykke $\sin$ og $\cos$ på følgende måte $$\cos(z) = \frac{e^{iz} + e^{-iz}}{2} \hspace{20px} \sin(z) = \frac{e^{iz}-e^{-iz}}{2i}$$ Da er det også vel å merke at $$\cos^2z + \sin ^2 z = 1, \hspace{5px} \forall z \in \mathbb{C} $$ og beviset kan gjøres som trening for leseren.</p>
+      <div id="fraktal">
+        <div>
+        <h3>Fraktaler</h3>
+        <p>Først og fremst, finnes det ikke en god definisjon på hva en fraktal er. Man kan prøve å sette ord på det ved å si at fraktaler er tallfølger som har et utganspunkt og utvikler seg videre gjennom en algoritme. En av de mest kjente fraktalene er den avbildet som ble funnet av <a href="https://en.wikipedia.org/wiki/Benoit_Mandelbrot">Benoit Mandelbrot</a> og er kalt for Mandelbrot mengden</p>
+        </div>
+        <div>
+          <img id="bilde2" src="Bilder/fractal-gf54d306f5_640.jpeg" alt="bilde av mandelbrot set">
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Infobar -->
+  <div class="infobar">
+    Creator: Daniel Løfwander
+  </div>
+</body>
+</html>

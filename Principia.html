@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<title>Mathedemo</title>
+<!-- LATEX import -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+<link rel="stylesheet" href="./Navigering.css">
+<style>
+#informasjon1 {
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit,1fr);
+}
+</style>
+</head>
+
+<body>
+ <!-- Navbar-->
+ <div class="navbar">
+    <a href="index.html">Hjem</a>
+    <a class="aktivside" href="Principia.html">Principia Mathematica</a>
+    <a href="Komplekse.html">Komplekse tall</a>
+    <a href="Taylor.html">Taylorrekker</a>
+    <a href="Imponerelærer.html">Tips</a>
+    <a href="memes.html">Memes</a>
+    <a id="git" href="https://github.com/Danajax" target="_blank">
+        <img src="./Bilder/GitHub-Mark-Light-32px.png">
+    </a>
+  </div>
+    <div class="main">
+      <div class="overskrift">
+      <h3>Har du noen gang utfordret matematikkens mest fundamentale prinsipp? Hvordan har man kommet frem til at $1+1=2$? Gjennom sunn fornuft kan vi jo forestille oss at dette er sant. Forestill deg at du har $1$ eple og din venn har $1$ eple, da er det naturlig at dere til sammen har 2 epler, og slik fortsetter det med alle naturlige tall. Men hva om jeg forteller deg at $1+1 = 1$ også er sant, kanskje dette vekker din interesse?</h3>
+      </div>
+  <div id="informasjon1">
+      <div><h3>Hva er Principia Mathematica?</h3>
+      <p>Principia Mathematica er en bok som er skrevet av Alfred North Whitehead og Bertrand Russel på tidlig 1900-tallet. Matematikerne ønsket å skrive denne boken for å minimere bruken av aksiomer, utrykke matematikk mest mulig symbolsk og for å løse paradokser i mengdelære. Mye av boken baserer seg på å definere arimetisk addisjon slik at man kan bevise 1 + 1 = 2. </p> </div>
+      <div id="bilde1">
+      </div>
+
+  </div>
+  </div>
+  <div class="bevis">
+      <div>
+          <h3>Bevis for 1 + 1 = 2</h3>
+          <p> I beviset vil det bli oppdaget kjente aksiomer, blant annet Peano Aksiomer. Merk notasjonen $S(0) = 1 \hspace{5px} \text{og} \hspace{5px} S(1) = 2$, der vi kjenner til $S$ som det etterfølgende tallet. </p>
+          Vi har følgende
+          <!-- LATEX kode -->
+          $$\forall x: x = y \implies \left (z: x = z \implies y = z \right ) \implies x + 0 = y $$ $$\implies \left (x + 0 = z \implies y = z \right ) $$
+          $$x + 0 = y \implies \left (x + 0 = z \implies y = z \right ) $$
+          $$\forall y:  x + 0 = y \implies \left ( x + 0 = z \implies y = z \right ) $$
+          $$\forall y: x + 0 = y \implies \left (x+0=z \implies y = z \right ) $$ $$ \implies x + 0 = x \implies \left ( x + 0 = z \implies x = z \right )$$
+          $$ x + 0 = x \implies \left (x + 0 = z \implies x = z \right ) $$
+          $$x + 0 = z \implies x = z $$
+          $$\forall z: x + 0 = z \implies x = z$$
+          $$\left ( \forall z: x + 0 = z \implies x = z \right ) \implies \left ( x + 0 = x \implies x = x \right )$$
+          $$ x + 0 = x \implies x = x $$
+          $$x = x $$
+          $$ \forall z : x = y \implies \left ( x = z \implies y = z \right ) $$
+          $$ \forall z : x = y \implies \left ( x = z \implies y = z \right )  \implies x = y $$ $$\implies \left ( x = x \implies y = x \right )$$
+          $$x = y \implies \left ( x = x \implies y = x \right )$$
+          $$x = y \implies \left ( x = x \implies y = x \right ) \implies \left ( x = y \implies x  = x \right ) $$ $$ \implies \left ( x = y \implies y = x \right )$$
+          $$\left ( x = y \implies x  = x \right ) \implies \left ( x = y \implies y = x \right )$$
+          $$x = x \implies \left ( x = y \implies x = x \right )$$
+          $$x = y \implies y = x $$
+          $$\forall x: x + S(y) = S(x+y)$$
+          $$\forall x: x + S(y) = S(x+y) \implies S(0) + S(y) = S(S(0) + y) $$
+          $$ S(0) + S(y) = S(S(0) + y) $$
+          $$\forall y: S(0) + S(y) = S(S(0) + y) $$
+          $$\forall S(0) + S(y) = S(S(0) + y) $$ $$\implies S(0) + S(0) = S(S(0) + 0)$$
+          $$S(0) + S(0) = S(S(0) + 0)$$
+          $$\forall x: x + 0 = x$$
+          $$\forall x: x + 0 = x \implies S(0) + 0 = S(0)$$
+          $$S(0) + 0 = S(0)$$
+          $$\forall x: x = y \implies S(x) = S(y)$$
+          $$\forall x: x = y \implies S(x) = S(y) \implies (S(0) + 0) = y $$ $$ \implies S(S(0) + 0) = S(y)$$
+          $$S(0) + 0) = y \implies S(S(0) + 0) = S(y)$$
+          $$\forall y: S(0) + 0) = y \implies S(S(0) + 0) = S(y)$$
+          $$\forall y: S(0) + 0) = y \implies S(S(0) + 0) = S(y) $$ $$ \implies S(0) + 0 = S(0) \implies S(S(0) + 0) = S(S(0))$$
+          $$S(0) + 0 = S(0) \implies S(S(0) + 0) = S(S(0))$$
+          $$S(S(0) + 0) = S(S(0))$$
+          $$\forall x: x = y \implies y = x$$
+          $$\forall x: x = y \implies y = x \implies S(0)+ S(0) = y $$ $$ \implies y = S(0) + S(0)$$
+          $$S(0)+ S(0) = y \implies y = S(0) + S(0)$$
+          $$\forall y: S(0)+ S(0) = y \implies y = S(0) + S(0)$$
+          $$\forall y: S(0)+ S(0) = y \implies y = S(0) + S(0) $$ $$ \implies S(0) + S(0) = S(S(0) + 0)  $$ $$ \implies S(S(0) + 0) = S(0) + S(0)$$
+          $$S(0) + S(0) = S(S(0) + 0) \implies S(S(0) + 0) = S(0) + S(0)$$
+          $$S(S(0) + 0) = S(0) + S(0)$$
+          $$\forall z: x = y \implies x = z \implies y = z \implies x = y $$ $$ \implies x = S(S(0)) \implies y = S(S(0))$$
+          $$x = y \implies x = S(S(0)) \implies y = S(S(0))$$
+          $$\forall x: x = y \implies x = S(S(0)) \implies y = S(S(0))$$
+          $$\implies S(S(0) + 0) = y \implies S(S(0) + 0) = S(S(0) $$ $$\implies y = S(S(0))$$
+          $$y = S(S(0)) \implies S(S(0) + 0) = y $$ $$ \implies S(S(0) + 0) = S(S(0) \implies y = S(S(0))$$
+          $$\forall y: y = S(S(0)) \implies S(S(0) + 0) = y $$ $$\implies S(S(0) + 0) = S(S(0) \implies y = S(S(0))$$
+          $$\forall y: y = S(S(0)) \implies S(S(0) + 0) = y $$ $$\implies S(S(0) + 0) = S(S(0) \implies y = S(S(0)) $$ $$ \implies S(S(0) + 0) = S(0) + S(0) $$ $$ \implies S(S(0) + 0) = S(S(0)) \implies S(0) + S(0) = S(S(0))$$
+          $$S(S(0) + 0) = S(0) + S(0) \implies S(S(0) + 0) = S(S(0)) $$ $$\implies S(0) + S(0) = S(S(0))$$
+          $$S(S(0) + 0) = S(S(0)) \implies S(0) + S(0) = S(S(0))$$
+          $$S(0) + S(0) = S(S(0)) \hspace{30px} \square$$
+          <p>Beviset er ferdig og vi har bevist at $1 + 1 = 2$ gjennom at det etterfølgende tallet til 0 addert med det etterfølgende tallet til 0 er det samme som det etterfølgende tallet til det etterfølgende tallet til 0. $\blacksquare$</p>
+      </div>
+  </div>
+  <!-- Infobar -->
+  <div class="infobar">
+    Creator: Daniel Løfwander
+  </div>
+</body>
+</html>
