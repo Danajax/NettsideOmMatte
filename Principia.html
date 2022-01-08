@@ -10,6 +10,7 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
 <link rel="stylesheet" href="./Navigering.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 #informasjon1 {
     background-color: lightblue;
@@ -22,17 +23,28 @@
 
 <body>
  <!-- Navbar-->
- <div class="navbar">
-    <a href="index.html">Hjem</a>
-    <a class="aktivside" href="Principia.html">Principia Mathematica</a>
-    <a href="Komplekse.html">Komplekse tall</a>
-    <a href="Taylor.html">Taylorrekker</a>
-    <a href="Imponerelærer.html">Tips</a>
-    <a href="memes.html">Memes</a>
-    <a id="git" href="https://github.com/Danajax" target="_blank">
-        <img src="./Bilder/GitHub-Mark-Light-32px.png">
-    </a>
-  </div>
+ <div class="navbar" id="topnav">
+   <a href="index.html">Hjem</a>
+   <a class="aktivside" href="principia.html">Principia Mathematica</a>
+   <a href="Komplekse.html">Komplekse tall</a>
+   <a href="taylor.html">Taylorrekker</a>
+   <a href="tips.html">Tips</a>
+   <a href="memes.html">Memes</a>
+   <div class="dropned">
+     <a class="dropbtn">Kontakt <i class="fa fa-caret-down"></i></a>
+     <div class="innhold">
+      <a href="https://github.com/Danajax" class="github" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://discord.gg/homework" class="reddit" target="_blank"><i class="fa fa-reddit"></i></a>
+      <a href="https://discord.gg/homework" class="stackexchange" target="_blank"><i class="fa fa-stack-exchange"></i></a>
+      <a href="https://discord.gg/homework" class="stackoverflow" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+      <a href="https://discord.gg/homework" class="steam" target="_blank"><i class="fa fa-steam"></i></a>
+      <a href="https://discord.gg/homework" class="mail" target="_blank"><i class="fa fa-envelope"></i></a>
+     </div>
+   </div>
+   <a href="#" class="icon" onclick="myFunction()">
+   <i class="fa fa-bars"></i>
+ </a>
+ </div>
     <div class="main">
       <div class="overskrift">
       <h3>Har du noen gang utfordret matematikkens mest fundamentale prinsipp? Hvordan har man kommet frem til at $1+1=2$? Gjennom sunn fornuft kan vi jo forestille oss at dette er sant. Forestill deg at du har $1$ eple og din venn har $1$ eple, da er det naturlig at dere til sammen har 2 epler, og slik fortsetter det med alle naturlige tall. Men hva om jeg forteller deg at $1+1 = 1$ også er sant, kanskje dette vekker din interesse?</h3>
@@ -108,5 +120,6 @@
   <div class="infobar">
     Creator: Daniel Løfwander
   </div>
+  <script src="hamburger.js" charset="utf-8"></script>
 </body>
 </html>

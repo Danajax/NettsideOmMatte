@@ -10,24 +10,86 @@
     src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
 <link rel="stylesheet" href="./Navigering.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
  <!-- Navbar-->
- <div class="navbar">
-    <a href="index.html">Hjem</a>
-    <a href="Principia.html">Principia Mathematica</a>
-    <a href="Komplekse.html">Komplekse tall</a>
-    <a class="aktivside" href="Taylor.html">Taylorrekker</a>
-    <a href="Imponerelærer.html">Tips</a>
-    <a href="memes.html">Memes</a>
-    <a id="git" href="https://github.com/Danajax" target="_blank">
-      <img src="./Bilder/GitHub-Mark-Light-32px.png">
-  </a>
-  </div>
+ <div class="navbar" id="topnav">
+   <a href="index.html">Hjem</a>
+   <a href="principia.html">Principia Mathematica</a>
+   <a href="Komplekse.html">Komplekse tall</a>
+   <a class="aktivside" href="taylor.html">Taylor rekker</a>
+   <a href="tips.html">Tips</a>
+   <a href="memes.html">Memes</a>
+   <div class="dropned">
+     <a class="dropbtn">Kontakt <i class="fa fa-caret-down"></i></a>
+     <div class="innhold">
+      <a href="https://github.com/Danajax" class="github" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://discord.gg/homework" class="reddit" target="_blank"><i class="fa fa-reddit"></i></a>
+      <a href="https://discord.gg/homework" class="stackexchange" target="_blank"><i class="fa fa-stack-exchange"></i></a>
+      <a href="https://discord.gg/homework" class="stackoverflow" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+      <a href="https://discord.gg/homework" class="steam" target="_blank"><i class="fa fa-steam"></i></a>
+      <a href="https://discord.gg/homework" class="mail" target="_blank"><i class="fa fa-envelope"></i></a>
+     </div>
+   </div>
+   <a href="#" class="icon" onclick="myFunction()">
+   <i class="fa fa-bars"></i>
+ </a>
+ </div>
+ <div class="overskrift">
+   <p>Nå beveger vi oss inn på interessant matematikk. Før datamaskinens alder, hadde matematikere stor nytte av å kunne uttrykke funksjoner slik som $e^x$ og $\sin x$ som tallfølger. <a href="https://en.wikipedia.org/wiki/Taylor_series">Brook Taylor</a> var mannen som oppdaget det vi idag kaller for Taylor's teorem og Taylor rekker. Denne kunnskapen er svært anvendbar og kan gjøre mange kalkulasjoner og beviser lettere.</p>
+ </div>
+ <div class="main">
+   <div class="informasjon">
+     <h3>Hva er Taylor rekker?</h3>
+      $$f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2$$$$+ \frac{f'''(a)}{3!}(x-a)^3 + ... + \frac{f^{(n)}(a)}{n!}(x-a)^n$$
+      <p>Penere uttrykt som $$\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n$$, men forutsetter at f er uendelig deriverbar i punktet $a$</p>
+    <div style="overflow-x:auto;">
+      <table>
+      <tr>
+        <th>Funksjon</th>
+        <th>Taylor rekke</th>
+        <th>Forenklet rekke</th>
+      </tr>
+      <tr>
+        <td>$$e^x$$</td>
+        <td>$$1+\frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + ...$$</td>
+        <td>$$\sum^\infty_{n = 0} \frac{x^n}{n!}$$</td>
+      </tr>
+      <tr>
+        <td>$$\sin x$$</td>
+        <td>$$x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ...$$</td>
+        <td>$$\sum^\infty_{n = 0} \frac{(-1)^nx^{2n+1}}{(2n+1)!}$$</td>
+      </tr>
+      <tr>
+        <td>$$\cos x$$</td>
+        <td>$$1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + ...$$</td>
+        <td>$$\sum^\infty_{n=0} \frac{(-1)^nx^{2n}}{(2n)!}$$</td>
+      </tr>
+      <tr>
+        <td>$$\sinh x $$</td>
+        <td>$$x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + ...$$</td>
+        <td>$$\sum^\infty_{n=0} \frac{x^{2n+1}}{(2n+1)!}$$</td>
+      </tr>
+      <tr>
+        <td>$$\cosh x$$</td>
+        <td>$$1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + ...$$</td>
+        <td>$$\sum^\infty_{n=0} \frac{x^2n}{(2n)!}$$</td>
+      </tr>
+      </table>
+      <p>I tillegg til disse finnes det flere Taylor rekker, men dette er de jeg kan anbefale å lære ettersom de dukker opp ofte.</p>
+</div>
+   </div>
+
+ </div>
+
+
+ </div>
   <!-- Infobar -->
   <div class="infobar">
     Creator: Daniel Løfwander
   </div>
+  <script src="hamburger.js" charset="utf-8"></script>
 </body>
 </html>
