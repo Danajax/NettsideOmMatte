@@ -6,3 +6,4 @@ function myFunction() {
     x.className = "navbar";
   }
 }
+//Kilde: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
