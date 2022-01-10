@@ -18,33 +18,21 @@
  <div class="navbar" id="topnav">
    <a href="index.html">Hjem</a>
    <a href="principia.html">Principia Mathematica</a>
-   <a href="Komplekse.html">Komplekse tall</a>
-   <a class="aktivside" href="taylor.html">Taylor rekker</a>
-   <a href="tips.html">Tips</a>
+   <a href="komplekse.html">Komplekse tall</a>
+   <a class="aktivside" href="taylor.html">Taylorrekker</a>
    <a href="memes.html">Memes</a>
-   <div class="dropned">
-     <a class="dropbtn">Kontakt <i class="fa fa-caret-down"></i></a>
-     <div class="innhold">
-      <a href="https://github.com/Danajax" class="github" target="_blank"><i class="fa fa-github"></i></a>
-      <a href="https://discord.gg/homework" class="reddit" target="_blank"><i class="fa fa-reddit"></i></a>
-      <a href="https://discord.gg/homework" class="stackexchange" target="_blank"><i class="fa fa-stack-exchange"></i></a>
-      <a href="https://discord.gg/homework" class="stackoverflow" target="_blank"><i class="fa fa-stack-overflow"></i></a>
-      <a href="https://discord.gg/homework" class="steam" target="_blank"><i class="fa fa-steam"></i></a>
-      <a href="https://discord.gg/homework" class="mail" target="_blank"><i class="fa fa-envelope"></i></a>
-     </div>
-   </div>
-   <a href="#" class="icon" onclick="myFunction()">
+   <a class="icon" onclick="myFunction()">
    <i class="fa fa-bars"></i>
  </a>
  </div>
  <div class="overskrift">
-   <p>Nå beveger vi oss inn på interessant matematikk. Før datamaskinens alder, hadde matematikere stor nytte av å kunne uttrykke funksjoner slik som $e^x$ og $\sin x$ som tallfølger. <a href="https://en.wikipedia.org/wiki/Taylor_series">Brook Taylor</a> var mannen som oppdaget det vi idag kaller for Taylor's teorem og Taylor rekker. Denne kunnskapen er svært anvendbar og kan gjøre mange kalkulasjoner og beviser lettere.</p>
+   <h3>Nå beveger vi oss inn på interessant matematikk. Før datamaskinens alder, hadde matematikere stor nytte av å kunne uttrykke funksjoner slik som $e^x$ og $\sin x$ som tallfølger. <a href="https://en.wikipedia.org/wiki/Taylor_series">Brook Taylor</a> var mannen som oppdaget det vi idag kaller for Taylor's teorem og Taylor rekker. Denne kunnskapen er svært anvendbar og kan gjøre mange kalkulasjoner og beviser lettere.</h3>
  </div>
  <div class="main">
    <div class="informasjon">
      <h3>Hva er Taylor rekker?</h3>
       $$f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2$$$$+ \frac{f'''(a)}{3!}(x-a)^3 + ... + \frac{f^{(n)}(a)}{n!}(x-a)^n$$
-      <p>Penere uttrykt som $$\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n$$, men forutsetter at f er uendelig deriverbar i punktet $a$</p>
+      <p>Penere uttrykt som $$\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n$$, men forutsetter at f er uendelig deriverbar i punktet $a$. For å presisere taylorpoynomet kan vi skrive følgende: $$T_nf(x;a) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k$$</p>
     <div style="overflow-x:auto;">
       <table>
       <tr>
@@ -53,32 +41,34 @@
         <th>Forenklet rekke</th>
       </tr>
       <tr>
-        <td>$$e^x$$</td>
+        <td>$$T_n(e^x)$$</td>
         <td>$$1+\frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + ...$$</td>
         <td>$$\sum^\infty_{n = 0} \frac{x^n}{n!}$$</td>
       </tr>
       <tr>
-        <td>$$\sin x$$</td>
+        <td>$$T_n(\sin x)$$</td>
         <td>$$x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ...$$</td>
         <td>$$\sum^\infty_{n = 0} \frac{(-1)^nx^{2n+1}}{(2n+1)!}$$</td>
       </tr>
       <tr>
-        <td>$$\cos x$$</td>
+        <td>$$T_n(\cos x)$$</td>
         <td>$$1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + ...$$</td>
         <td>$$\sum^\infty_{n=0} \frac{(-1)^nx^{2n}}{(2n)!}$$</td>
       </tr>
       <tr>
-        <td>$$\sinh x $$</td>
+        <td>$$T_n(\sinh x)$$</td>
         <td>$$x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + ...$$</td>
         <td>$$\sum^\infty_{n=0} \frac{x^{2n+1}}{(2n+1)!}$$</td>
       </tr>
       <tr>
-        <td>$$\cosh x$$</td>
+        <td>$$T_n(\cosh x)$$</td>
         <td>$$1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + ...$$</td>
         <td>$$\sum^\infty_{n=0} \frac{x^2n}{(2n)!}$$</td>
       </tr>
       </table>
       <p>I tillegg til disse finnes det flere Taylor rekker, men dette er de jeg kan anbefale å lære ettersom de dukker opp ofte.</p>
+      <h3>Restledd</h3>
+      <p>Det som er viktig å merke seg er at taylorpolynomene følger grafene veldig godt, men i noen funksjoner så kan det være vanskelig å vite hvor den følger grafen og hvor den har et avvik. Derfor har vi enda en formel for Taylors formel: $$f(b) = T_nf(b) + \frac{1}{n!} \int_a^b f^{(n+1)}(t)(b-t)^n dt $$ hvor vi er nødt til å anta at $f$ og de $n+1$ deriverte til $f$ er kontinuerlig på [a,b].</p>
 </div>
    </div>
 

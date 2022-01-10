@@ -13,6 +13,7 @@
   </script>
 <link rel="stylesheet" href="./Navigering.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -20,29 +21,17 @@
  <div class="navbar" id="topnav">
    <a href="index.html">Hjem</a>
    <a href="principia.html">Principia Mathematica</a>
-   <a class="aktivside" href="Komplekse.html">Komplekse tall</a>
+   <a class="aktivside" href="komplekse.html">Komplekse tall</a>
    <a href="taylor.html">Taylorrekker</a>
-   <a href="tips.html">Tips</a>
    <a href="memes.html">Memes</a>
-   <div class="dropned">
-     <a class="dropbtn">Kontakt <i class="fa fa-caret-down"></i></a>
-     <div class="innhold">
-      <a href="https://github.com/Danajax" class="github" target="_blank"><i class="fa fa-github"></i></a>
-      <a href="https://discord.gg/homework" class="reddit" target="_blank"><i class="fa fa-reddit"></i></a>
-      <a href="https://discord.gg/homework" class="stackexchange" target="_blank"><i class="fa fa-stack-exchange"></i></a>
-      <a href="https://discord.gg/homework" class="stackoverflow" target="_blank"><i class="fa fa-stack-overflow"></i></a>
-      <a href="https://discord.gg/homework" class="steam" target="_blank"><i class="fa fa-steam"></i></a>
-      <a href="https://discord.gg/homework" class="mail" target="_blank"><i class="fa fa-envelope"></i></a>
-     </div>
-   </div>
-   <a href="#" class="icon" onclick="myFunction()">
+   <a class="icon" onclick="myFunction()">
    <i class="fa fa-bars"></i>
  </a>
  </div>
 
   <div class="main">
     <div class="overskrift">
-      <p>Nå har du endelig trykket deg inn på komplekse tall og jeg kan fortelle deg at disse tallene lar deg gjøre noe helt unikt! Negative kvadratrøtter, logaritmer og du blir introdusert til noe helt nytt! Nemlig: $i^2 = -1$, et "tall" som har egenskapet til å være et negativt kvadrat, fascinerende hva? Vi kommer ikke til å gå i dybden på kompleks analyse, men kommer til å forklare de mest fundamentale prinsippene. </p>
+      <h3>Nå har du endelig trykket deg inn på komplekse tall og jeg kan fortelle deg at disse tallene lar deg gjøre noe helt unikt! Negative kvadratrøtter, alltid løsninger til andregradspolynomer, negative logaritmer og du blir introdusert til noe helt nytt! Nemlig: $i^2 = -1$, et tall som har egenskapen til å være et negativt kvadrat, fascinerende hva? Vi kommer ikke til å gå i dybden på kompleks analyse, men kommer til å forklare de mest fundamentale prinsippene.</h3>
     </div>
     <div class="informasjon">
       <h3>Hva er komplekse tall?</h3>
@@ -53,9 +42,7 @@
       Dette er Eulers identitet og blir ofte beundret av mange. Men hvordan kom vi hit? Vi ser at $e^{i\pi}$ ikke er på kartesisk koordinatform, derfor må vi lære <i>polar koordinatform</i>. $z = r (\cos(\theta) + i\sin(\theta))$, der $r = |z| = \sqrt{(a^2+b^2)}$ er <i>modulus</i> og $\theta$ er $argumentet$ (Arg). Argumentet finner vi gjennom følgende $\sin \theta = \frac{b}{r}$ og $\cos \theta = \frac{a}{r}$. Vi følger eksempelet og gjør om $z$ fra kartesisk til polarform. $$z = 2 + 2i $$ $$r = \sqrt{2^2+2^2} = 2\sqrt{2}$$ $$\arccos \theta = \frac{2}{2\sqrt{2}} = \frac{\pi}{4}$$ $$\arcsin \theta = \frac{2}{2\sqrt{2}} = \frac{\pi}{4}$$ $$z = 2\sqrt{2} \left (\cos \frac{\pi}{4} + i \sin \frac{\pi}{4}\right ) \hspace{10px} \square $$ </p>
       <p>Nå tenker du kanskje at vi er på villspor men, det var her Euler oppdaget følgende formel $$re^{i\theta} = r(\cos \theta + i \sin \theta)$$
       Da kan Euler sin identitet grovt bevises og er en oppgave til leseren. Men så oppdager <a href="https://mathshistory.st-andrews.ac.uk/Biographies/De_Moivre/">Abraham de Moivre</a> et gunstig korollar. Nemlig at $$re^{in\theta} = r(\cos n\theta + i \sin n\theta)$$ Etter dette har du nå veldig grunnlegende kunnskaper om komplekse tall, men dette er nok til å finne negativ logaritmer og negative røtter. </p>
-      <input id="a" placeholder="Skriv inn a">
-      <input id="b" placeholder="Skriv inn b">
-      <button id="knapp" onclick="fn2()">Polarform</button>
+
       <h3>Negativ partalls-rot?</h3>
       $$\sqrt{-64}$$
       <p>Er et veldig grunnlegende eksempel, og er noe vi kan løse med komplekse tall $$=\sqrt{64i^2} = 8i \hspace{10px}\square$$ En n-te rot har opp mot n-løsninger som er komplekse. For eksempel ville mange svart at $\sqrt[3]{1} = 1$, men det eksisterer faktisk 3 løsninger. For å dykke inn i disse er det lurt å ha studert <i>algebraens fundamentalteorem</i></p>
@@ -76,7 +63,9 @@
         <div>
           <img id="bilde2" src="Bilder/fractal-gf54d306f5_640.jpeg" alt="bilde av mandelbrot set">
         </div>
+        </div>
       </div>
+      <div class="mathnotepad-embed" data-contents="N4IgzgLghhCmIC5RlgG1gYwgSwPYDtFRt8ATWAD0QAYAacaAJwhvtjJoF96wNHdUqACq4ADlzYVRjWGDB58YRAG1QANyioArvAQgQ9ALaxoRTt3WadifUZNQznALr01sRvIKIAzPS2jSGFhSGwAmalDQgFpqAEYo2OohWIBOBDj0gA4AOgB2WIAWAC0QTiA%3D"></div>
 
 
 
@@ -90,6 +79,6 @@
     Creator: Daniel Løfwander
   </div>
   <script src="hamburger.js" charset="utf-8"></script>
-  <script src="complex.js" charset="utf-8"></script>
+  <script src="https://mathnotepad.com/embed.min.js" async></script>
 </body>
 </html>

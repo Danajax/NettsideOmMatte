@@ -23,23 +23,12 @@ body {
     font-family: inherit;
     margin: 0;
 }
-.innhold {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
 .innhold a {
     float: none;
     padding: 14px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-}
-.dropned:hover .innhold {
-    display: block;
 }
 .navbar .icon {
   display: none;
@@ -91,16 +80,22 @@ body {
 .steam{
     background-color: darkblue;
 }
-.mail{
+.btc{
     background-color: rgb(57, 53, 255);
 }
-.overskrift, .informasjon, .bevis {
+.overskrift, .informasjon, .bevis, #informasjon1{
     font-family: 'Times New Roman', Times, serif;
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid black;
     font-size: 20px;
-    background-color: darkblue;
+    background-color: cyan;
+}
+#informasjon1 {
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit,1fr);
 }
 .informasjon {
     background-color: lightblue;
@@ -120,14 +115,19 @@ body {
 }
 #fraktal {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(630px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(615px, 1fr));
   grid-template-rows: repeat(auto-fit,1fr);
   margin: 10px;
 }
 #bilde2 {
   padding: 5px;
   min-height: 200px;
+  min-width: 99% !important;
   max-width: 100% !important;
+  border-radius: 10px;
+}
+.overskrift a{
+  color: black;
 }
 table{
     border-collapse: collapse;
@@ -146,14 +146,14 @@ th{
 tr{
   background-color: azure;
 }
-@media screen and (max-width:970px) {
+@media screen and (max-width:620px) {
   .navbar a:not(:first-child) {display: none}
   .navbar a.icon {
     float: right;
     display: block;
   }
 }
-@media screen and (max-width:970px) {
+@media screen and (max-width:620px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive a.icon {
     position: absolute;
