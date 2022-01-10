@@ -1,14 +1,15 @@
-var slideIndex = 0;
-showSlides();
+var memenr = 0;
+visMeme();
+var i;
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function visMeme() {
+  var memes = document.getElementsByClassName("meme");
+  for (i = 0; i < memes.length; i++) {
+    memes[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); 
+  memenr++;
+  if (memenr > memes.length) {memenr = 1}
+  memes[memenr-1].style.display = "block";
+  setTimeout(visMeme, 5000);
 }
+//Kilde: https://www.w3schools.com/howto/howto_js_slideshow.asp
