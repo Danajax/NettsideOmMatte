@@ -119,13 +119,6 @@ body {
   grid-template-rows: repeat(auto-fit,1fr);
   margin: 10px;
 }
-#bilde2 {
-  padding: 5px;
-  min-height: 200px;
-  min-width: 99% !important;
-  max-width: 100% !important;
-  border-radius: 10px;
-}
 .overskrift a{
   color: black;
 }
