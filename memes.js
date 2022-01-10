@@ -10,7 +10,7 @@ function visMeme() {
   memenr++;
   if (memenr > memes.length) {memenr = 1}
   memes[memenr-1].style.display = "block";
-  setTimeout(visMeme, 5000);
+  setTimeout(visMeme, 3000);
 }
 //Kilde: https://www.w3schools.com/howto/howto_js_slideshow.asp
 
